@@ -1,0 +1,30 @@
+#spec.txt Shallow Water Equations
+
+#Set annealing parameter
+#    Rm   Rf
+#AP  4.0  4.0
+
+#Ser annealing parameter from file (Comment AP line if you want to use this option)
+#   Rm_file      Rf_file
+AF  SWE/Rm.dat   SWE/Rf.dat
+
+#Set step size adjustment parameters: delta *= 1+a*(accept_rate-b)
+#   a     b
+SS  0.3   0.5
+
+#File path for measurements
+#Use LF for observed fraction or OD for the file with index of observed variables
+LF  0.8
+#    L   FileName
+#OD  16  observed.dat
+#   Nob  PathName
+MP  768  SWE/obs_16x16_forcing=0.02_PAMC.dat
+
+#File path for initial conditions
+#   PathName
+IP  L96_D_20_T_5_dt_0p025_ini.dat
+
+#Initial Guess for parameters
+#PA for a single parameter or PF for a file with initial guesses for all parameters
+PA  0.00000001
+#PF L96_D_20_param_ini.dat Not implemeted yet
