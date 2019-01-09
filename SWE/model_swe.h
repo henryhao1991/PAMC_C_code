@@ -46,7 +46,7 @@
 // Variables are y[0], ..., y[D-1],  Parameters are p[0],...,p[NP-1]
 /////////////////////////////////////////////////////////////////////////////////////////
 
-double n(int dx, int dy, int dir);
+int n(int dx, int dy, int dir);
 double eta(int dx, int dy, double *x);
 double U(int dx, int dy, double *x);
 double V(int dx, int dy, double *x);

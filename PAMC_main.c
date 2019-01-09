@@ -5,7 +5,7 @@
 #include <string.h>
 
 #include "dSFMT.h"
-#include "./Lorenz96/model_L96.h"
+#include "./SWE/model_swe.h"
 
 int get_Lidx(float Lfrac, int *Lidx);
 void get_Lidx_from_file(int L, int *Lidx, char *fname);
@@ -244,7 +244,7 @@ double RK2(int m, int d, double *x_m, double *p){
     }//end if
     else{
         for(d_temp=0;d_temp<D;d_temp++){
-            x_out[d] = x_m[d];
+            x_out[d_temp] = x_m[d_temp];
         }//end for d_temp
         for(step=0;step<nstep;step++){
             for(d_temp=0;d_temp<D;d_temp++){
